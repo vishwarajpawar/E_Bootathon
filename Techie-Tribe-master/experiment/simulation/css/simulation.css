@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container-fluid{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+}
+.row{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-direction: row;
+}
+
+.highlighted{
+    background-color: blue;
+    color: white;
+}
+
+.col-lg-6{
+    width: 48%;
+    height: auto;
+    margin: 1% 1%;
+}
+.window{
+    width: 40%;
+    margin: 1% 1%;
+}
+.controls{
+    margin: 5% 2%;
+}
+
+.col-lg-12{
+    width: 96%;
+    height: auto;
+    padding: auto 2%;
+}
+.controls .btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.btn-style{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: darkblue;
+}
+.text-center{
+    text-align: center;
+}
+.heading{
+    background: lightgreen;
+}
+.heading h3{
+    font-size: 25px;
+    padding: 10px;
+}
+.justify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+#simulation{
+    padding-top: 60px;
+    padding-bottom: 35px;
+    top: 10px;
+}
+#box{
+    max-height: 100vh;
+        
+    
+}
+@media(max-width: 768px){
+   .col-md-12{
+        width: 96%;
+        padding: auto 2%;
+    } 
+    .controls .btns{
+        flex-direction: row;
+    }       
+    #box{
+        max-height: 35vh;
+        margin-bottom: 5px;
+        box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .heading{
+        position: sticky;
+    }
+    .heading h3{
+        font-size: 20px;
+        padding: 0px;
+    }
+    .justify{
+        margin: 10px auto;
+    }
+    .btn-style{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 15px;
+        color: darkblue;
+    }
+
+}
+.padding{
+    padding: 17px 15px;
+}
+.line{
+    padding-bottom: 5px;
+    border-bottom: 1px solid red;
+}
+.updated{
+    background: blue;
+    color: white;
+}

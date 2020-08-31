@@ -1,0 +1,448 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header
+{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#3652a4;
+    z-index: 1000;
+
+}
+header .logo
+{
+ color: #fff;
+ font-size: 20px;
+ padding-left: 0%;
+ text-decoration: none;
+ letter-spacing: 2px ;
+ font-weight: 600;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+
+header ul li a 
+{
+    position: relative;
+    padding:5px 10px;
+    color: #fff ;
+    display: inline-block;
+    text-decoration:none;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bold;
+    margin-right: 20px;
+
+}
+
+
+header ul li  :hover
+{
+    background-color:#404247;
+    border-radius: 10px;
+}
+
+
+/* dropdown menu*/
+.dropbtn {
+    background-color:transparent ;
+    color: white;
+    padding-top: 5px;
+    margin-right: 20px;
+    font-size: 20px;
+    border: none;
+    font-size: larger;
+    font-weight: bold;
+   
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3652a4;
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  
+  .dropdown-content a:hover {background-color:#3652a4;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown-content a :hover
+  {
+      background-color: #3652a4;
+  }
+
+  .arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+ /*dropdown menu*/
+.toogle
+{
+    display: none;
+}
+
+section
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 70vh;
+
+}
+
+#home
+{
+    min-height: 80vh;
+    padding-bottom: 0%;
+    
+}
+
+#post
+{
+    min-height: 40vh;
+
+
+}
+
+
+section img
+{
+    max-width: 350px;
+    margin-left: 30px;
+}
+
+section h2
+{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+section p
+{
+    font-size: 20px;
+}
+
+section:nth-child(odd)
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(248, 248, 248);
+    color: black;
+    padding-top: 0% ;
+}
+
+@media (max-width:992px)
+{
+    header ul 
+    {
+        position: absolute;
+        top: -200%;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        padding: 50px 100px;
+        transition: 0.5s;
+        text-align: center;
+        background: #111;
+        overflow: auto;
+        flex-direction: column;
+        transform: translateY(-100px);
+        opacity: 0;
+    
+
+    }
+    header.active ul 
+    {
+        transform: translateY(0);
+        top: 65px;
+        opacity: 1;
+
+    }
+
+    header ul li a 
+    {
+        margin: 5px 0;
+        font-size:24px;
+    }
+
+    .toogle 
+    {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+
+    }
+
+    .toogle::before
+    {
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100% ;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        transition: 0.5s;
+        box-shadow: 0 10px 0 #fff;
+
+
+
+    }
+
+    .toogle::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100% ;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        transition: 0.5s;
+
+
+
+    }
+/*
+    header .active .toogle::before
+    {
+        top: 14px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #fff;
+    }
+    
+    header .active .toogle::after
+    {
+        bottom: 14px;
+        transform: rotate(-45deg);
+    }
+*/
+    section 
+    {
+        padding: 60px 25px 35px ;
+        flex-direction: column;
+    }
+    section img 
+    {
+        margin: 50px 0 0;
+        max-width: 100;
+        border-radius: 30px;
+
+    }
+    .center-it{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* pre test*/
+.quiz {
+    width: 100%;
+    margin-left:0px;
+    background:#d2def2;
+    padding: 40px 20px;
+    width:inherit;
+    border-radius:20px;
+    float:left;
+}
+
+.quiz input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.quiz p 
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.textbox {
+    height:22px;
+    width:120px;
+    font-size:16px;
+    border-radius:5px;
+    border:none;
+    padding-left:5px;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+}
+.quiz .button {
+    background:green;
+    border:none;
+    border-radius:5px;
+    padding:10px;
+    color:white;
+    font-size:16px;
+    transition-duration:.5s;
+    margin-top:50px;
+}
+
+
+.quiz .button:hover {
+    background: green;
+    border:1px solid green;
+    color:black;
+    cursor:pointer;
+   
+}
+
+
+.after-submit {
+    visibility:hidden;
+    background:#0000ff;
+    padding:10px 20px 10px 20px;
+    width:device-width;
+    border-radius:20px;
+    margin-left:20px;
+    font-size:40px;
+    align-content: center;
+    color: green;
+}
+/* pre test*/
+
+
+/* post test*/
+
+#messages2
+{
+    color: green;
+    text-align: center;
+
+}
+.correct-count
+{
+    color: green;
+    text-align: center;
+}
+
+/* post test*/
+
+
+#pre h2
+{
+    text-align: center;
+    margin-top: 50px;
+}
+#quiz h2
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#lab h2
+{
+    text-align: center;
+    margin-top: 50px;
+}
+#simulation h2
+{
+    text-align: center;
+    margin-top: 50px;
+}
+#post h2
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#mainimg
+{
+    border-radius: 20px;
+}
+
+#messages
+{
+    color: green;
+    text-align: center;
+
+}
+#number_correct
+{
+    color: green;
+    text-align: center;
+}
+.center-it{
+    width: 50%;
+    margin: auto;
+}
+#quiztwo{
+    width: 100%;
+    margin: 1px auto;
+}
+@media(max-width: 768px){
+    .center-it{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 375px){
+    .center-it{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+#lab h3
+{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lab p
+{
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5px;
+}

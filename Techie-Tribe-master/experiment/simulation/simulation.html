@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=
+    device-width,initial-scale=1.0">
+    <title>Armstrong Number</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/simulation.css">
+</head>
+<body> 
+    <header id="header" class="container-fluid padding">
+        <a href="index.html" class="logo"> Armstrong Number</a>
+       
+
+    </header>
+
+   
+
+    <div id="simulation" class="container-fluid">
+        <div class="row">    
+            <div class="window col-md-12">
+                <div class="heading"><h3 class="text-center">Code</h3></div>
+                <div id="box">
+                    <div id="line1" class="highlighted">int main(){</div>
+                    <div id="line2" style="padding-left: 5%;">int number, count=0, sum=0, mul=1, rem, copy;</div>
+                    <div id="line3" style="padding-left: 5%;">for(number = 1; number <= 100; number++){</div>
+                    <div id="line4" style="padding-left: 10%;">copy = number;</div>
+                    <div id="line5" style="padding-left: 10%;">while(copy > 0){</div>
+                    <div id="line6" style="padding-left: 15%;">copy = copy / 10;</div>
+                    <div id="line7" style="padding-left: 15%;">count++;</div>
+                    <div id="line8" style="padding-left: 10%;">}</div>
+                    <div id="line9" style="padding-left: 10%;">copy = number; cnt = count;</div>
+                    <div id="line10" style="padding-left: 10%;">while(copy > 0){</div>
+                    <div id="line11" style="padding-left: 15%;">rem = copy % 10;</div>
+                    <div id="line12" style="padding-left: 15%;">while(cnt != 0){</div>
+                    <div id="line13" style="padding-left: 20%;">mul = mul * rem;</div>
+                    <div id="line14" style="padding-left: 20%;">cnt--;</div>
+                    <div id="line15" style="padding-left: 15%;">}</div>
+                    <div id="line16" style="padding-left: 15%;">sum = sum + mul;</div>
+                    <div id="line17" style="padding-left: 15%;">copy = copy / 10;</div>
+                    <div id="line18" style="padding-left: 15%;">mul = 1; cnt = count;</div>
+                    <div id="line19" style="padding-left: 10%;">}</div>
+                    <div id="line20" style="padding-left: 10%;">if(sum == number)</div>
+                    <div id="line21" style="padding-left: 15%;">printf("It is a armstrong No.");</div>
+                    <div id="line22" style="padding-left: 10%;">sum = 0; rem = 0; cnt = 0; count = 0</div>
+                    <div id="line23" style="padding-left: 5%;">}</div>
+                    <div id="line24" style="padding-left: 5%;">return 0;</div>
+                    <div id="line25">}</div>
+                </div>
+            </div>
+            <div class="controls col-md-12">
+                <div class="btns">
+                    <button id="btn" class="btn-style">Simulate</button>
+                    <button id="skip10" class="btn-style">Add 10 to no.</button>
+                </div>
+            </div>
+
+            <div class="window col-md-12">
+                <div class="heading"><h3 class="text-center">Execution</h3></div>
+                <div class="justify line">
+                    <p id="main-num">Number : <span id="num">0</span></p>
+                    <p id="n-digit">Number Of Digits : <span id="digit">0</span></p>
+                </div>
+                <div class="text text-center line">
+                    <p id="repoText"></p>
+                </div>
+                <div class="justify">
+                    <p id="rem-p">Remainder : <span id="rem"></span></p>
+                    <p id="quo-p">Quotient : <span id="quotient"></span></p>
+                    <p id="cpy-p">Copy : <span id="cp"></span></p>
+                    
+                </div>
+                <div class="justify">
+                    <p id="cnt-p">CNT : <span id="cnt1"></span></p>
+                    <p id="count-p">Counter : <span id="cnt"></span></p>
+                </div>
+                <div class="justify line">                   
+                    <p id="mul-p">Multiplication : <span id="mul">1</span></p>
+                    <p id="sum-p">Sum : <span id="sum">0</span></p>
+                </div>
+                <div class="justify line">
+                    <p id="final"></p>
+                </div>
+                <div class="justify">
+                    <p>No's discovered : <span id="found"></span></p>
+                </div>
+                <div class="text-center">
+                    <p>Armstrong No's from 1 to 100 :</p>
+                    <span> 1, 2, 3, 4, 5, 6, 7, 8, 9.</span>    
+                </div>
+            </div>
+        </div>
+
+        
+            
+    </div>
+    
+    
+
+   
+   
+   
+
+    
+
+<!---->
+
+
+
+
+
+   
+
+
+<script src="js/simulator.js"></script>
+</body>
+</html>
